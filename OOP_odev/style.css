@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 255, 0.595), rgba(255, 0, 0, 0.556), rgba(0, 128, 0, 0.584));
+    background-attachment: fixed;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 30px;
+        content: "İhsan Koca";
+        z-index: -1;
+        color: darkblue;
+    }
+}
+
+.container {
+    background: rgba(222, 222, 222, 0.5);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    .sekil:not(:last-child) {
+        border-bottom: 2px solid rgba(204, 204, 204, 0.5);
+    }
+}
+
+.sekil {
+    margin: 0 auto;
+
+    border: 1px solid rgba(204, 204, 204, 0.25);
+
+    &>div {
+        display: flex;
+        max-width: 450px;
+        padding: 30px;
+    }
+
+    .content {
+        min-width: 190px;
+        padding: 10px;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .sonuc {
+                font-size: 25px;
+            }
+
+            span {
+                position: absolute;
+            }
+        }
+    }
+
+    form {
+        min-width: 200px;
+        padding: 10px;
+
+        border: 1px solid rgba(255, 255, 170, 0.25);
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        input[name] {
+            width: 50px;
+            border-radius: 5px;
+            border: 1px silver solid;
+            margin-left: 20px;
+
+            &:focus {
+                outline: 1px solid rgb(136, 136, 136);
+            }
+        }
+    }
+}
+
+.kare {
+    position: relative;
+    margin: 20px;
+    border: 2px solid;
+    width: 90px;
+    height: 90px;
+
+    &>.a {
+        top: 35px;
+        left: -20px;
+    }
+
+    &>.b {
+        top: 95px;
+        left: 41px;
+    }
+
+    &>.c {
+        top: 35px;
+        right: -20px;
+    }
+
+    &>.d {
+        top: -20px;
+        left: 41px;
+    }
+}
+
+.dikdortgen {
+    position: relative;
+    border: 2px solid maroon;
+    width: 150px;
+    height: 90px;
+    margin: 20px;
+
+    & .a {
+        top: 37px;
+        left: -15px;
+    }
+
+    & .b {
+        bottom: -22px;
+        left: 70px;
+    }
+
+    & .c {
+        top: 37px;
+        right: -15px;
+    }
+
+    & .d {
+        top: -22px;
+        left: 70px;
+    }
+}
+
+.ucgen {
+    position: relative;
+    border-left: 2px solid darkblue;
+    width: 150px;
+    height: 110px;
+    margin: 20px;
+    transform: rotate(10deg);
+
+    .sonuc{
+        margin-left: -55px;
+    }
+
+    &::after {
+        position: absolute;
+        top: 41px;
+        left: -11px;
+        content: "";
+        border-top: 2px solid darkblue;
+        width: 192px;
+        transform: rotate(25deg);
+    }
+
+    &::before {
+        position: absolute;
+        bottom: 13px;
+        left: -3px;
+        content: "";
+        border-bottom: 2px solid darkblue;
+        width: 177px;
+        transform: rotate(-9deg);
+    }
+
+    & .a {
+        top: 44px;
+        left: -15px;
+        transform: rotate(-10deg);
+    }
+
+    & .b {
+        bottom: -14px;
+        left: 65px;
+        transform: rotate(-10deg);
+    }
+
+    & .c {
+        top: 15px;
+        left: 75px;
+        transform: rotate(-10deg);
+    }
+
+    .sonuc {
+        transform: rotate(-10deg);
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .sekil {
+
+        &>div {
+            display: block;
+            padding: 0;
+        }
+
+
+    }
+}
